@@ -110,4 +110,55 @@ function average(arr){
 }
 average([2,4,7,8])
 
+
+
 // 10.	Implement a function that finds the index of a specific element in an array. 
+
+function findIndex(array, element) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === element) {
+        return i; 
+      }
+    }
+    return 'element is not found';
+  }
+  
+  let arr1 = [10, 20, 30, 40, 50];
+  let arr2 = [1, 2, 3, 4, 5];
+
+  console.log(findIndex(arr1, 30));
+  console.log(findIndex(arr2, 4));
+ 
+
+
+
+  //11.	How would you check if a number is an integer? 
+
+ console.log(Number.isInteger(4)); 
+
+
+
+
+
+//  12.	Create a function that takes the age in years and returns the age in days. 
+
+function calcDays(years){
+    let NomOfDays=years*365;
+    console.log(NomOfDays);
+}
+
+calcDays(4)
+
+
+// 13.	Explain what a callback function is and provide a simple example. 
+
+//afunction that is passed into another function as argument and is called inside that other function
+
+function brintHello(){
+    console.log('have anice day ');
+}
+function insertName(Name, callback){
+console.log('hello ' +Name);
+callback()
+}
+insertName('ebrahim' ,brintHello)
